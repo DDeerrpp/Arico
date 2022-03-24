@@ -1,7 +1,8 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client({ intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_MEMBERS']});
 var prefix = '+';
-require('dotenv').config();
+
+const config = require("./config.json");
 const keepAlive = require("./server");
 
 const fs = require('fs');
@@ -51,4 +52,4 @@ bot.on('messageCreate', async message => {
 
 
 keepAlive();
-bot.login(process.env.token);
+bot.login(config.token);

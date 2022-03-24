@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const bot = new Discord.Client({ intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_MEMBERS']});
 var prefix = '+';
 
-// const config = require("./config.json");
 
 const fs = require('fs');
 

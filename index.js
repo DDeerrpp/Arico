@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client({ intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_MEMBERS']});
 var prefix = '+';
 
-const config = require("./config.json");
+// const config = require("./config.json");
 
 const fs = require('fs');
 
@@ -50,4 +50,4 @@ bot.on('messageCreate', async message => {
 
 
 
-bot.login(config.token);
+bot.login(process.env.DJS_TOKEN);
